@@ -21,6 +21,9 @@
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:indicator_size="5dp"
+        app:indicator_drawable="@drawable/indicator_default"
+        app:indicator_margin="4dp"
         android:gravity="center"
         android:orientation="horizontal" />
 

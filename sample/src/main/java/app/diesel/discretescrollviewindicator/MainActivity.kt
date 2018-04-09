@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var discreteScrollView: DiscreteScrollView
-    lateinit var indicator : DiscreteScrollViewIndicator
+    lateinit var discreteScrollViewIndicator : DiscreteScrollViewIndicator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         discreteScrollView.setItemTransformer(ScaleTransformer.Builder().setMaxScale(1f).setMinScale(0.8f).build() )
 
-        indicator = findViewById(R.id.indicator)
-        val adapter = CardAdapter(this);
+        discreteScrollViewIndicator = findViewById(R.id.indicator)
+        val adapter = CardAdapter(this)
         discreteScrollView.adapter = adapter
-        indicator.setDiscreteScrolView(discreteScrollView)
+        discreteScrollViewIndicator.setDiscreteScrolView(discreteScrollView)
     }
 }
